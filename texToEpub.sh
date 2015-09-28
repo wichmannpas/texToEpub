@@ -8,6 +8,11 @@ if [ "$1" == "-h" ] || [ "$1" == "" ]; then
   exit 0
 fi
 
+# check if file exists
+if [ ! -f "$1" ]; then
+  echo "File does not eixst. Exiting."
+  exit 1;
+fi
 
 # check if temporary directory exists
 if [ -d ".texEpubTemp" ]; then
