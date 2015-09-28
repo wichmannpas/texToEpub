@@ -1,5 +1,5 @@
 TexToEpub
-=============
+=========
 
 This is a shell script that converts an (La)TeX file to an EPUB file using TeX4ht and Calibre.
 
@@ -12,11 +12,16 @@ Requirements
 Usage
 -----
 
-Run the script ./texToEpub.sh specifying the file name without the *.tex* extension of your TeX file which should be converted as only parameter. For example to convert a file named *test.tex* to epub, use
+Run the script ./texToEpub.sh specifying the file name of your TeX file as only parameter. For example to convert a file named *test.tex* to epub, use
 
-    ./texToEpub.sh test
+    ./texToEpub.sh test.tex
 
-Which results in a file called *test.epub*.
+which generates a file called *test.epub*.
+
+Troubleshooting
+---------------
+
+  * **The temporary directory already exists. Exiting.** This error messages indicates that the temporary directory called *.texEpubTemp* is already existing. Remove the directory and restart the script.
 
 License
 -------
